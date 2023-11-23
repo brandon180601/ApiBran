@@ -18,6 +18,7 @@ from django.urls import path
 from api.views import *
 from api import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.iniciar_sesion, name='iniciar_sesion'),
