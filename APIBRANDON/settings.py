@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import environ
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,17 +91,27 @@ WSGI_APPLICATION = 'APIBRANDON.wsgi.application'
 
 # settings.py
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Services',
+#         'USER': 'postgres',
+#         'PASSWORD': '12345',
+#         'HOST': 'localhost',
+#         'PORT': '5432',  # El puerto por defecto de PostgreSQL
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Services',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT': '5432',  # El puerto por defecto de PostgreSQL
+        'NAME': 'servicios_puxs',
+        'USER': 'servicios_puxs_user',
+        'PASSWORD': 'cOcHEkbrMcwE2BqNUEwKY3fzf24B6xlJ',
+        'HOST': 'dpg-clftrevjc5ks73eah85g-a.oregon-postgres.render.com',
+        'PORT': '',  # Si se requiere un puerto específico, colócalo aquí
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -157,3 +168,4 @@ EMAIL_PORT = 587  # Puerto SMTP (generalmente 587 o 465)
 EMAIL_USE_TLS = True  # Usar TLS (True o False según el servidor)
 EMAIL_HOST_USER = 'brandon.silva.180@gmail.com'  # Tu dirección de correo electrónico
 EMAIL_HOST_PASSWORD = 'dxkmfupvfzsewnay'  # Tu contraseña de correo electrónico
+
