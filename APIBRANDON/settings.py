@@ -78,7 +78,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'APIBRANDON.wsgi.application'
 
 
 # Database
