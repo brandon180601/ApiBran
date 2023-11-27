@@ -17,8 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from api.views import *
 from api import views
-from django.conf import settings
-from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -45,7 +43,3 @@ urlpatterns = [
     path('Perfil3/', persona3.as_view(), name='persona3'),
     path('Perfil4/', persona4.as_view(), name='persona4')
 ]
-
-# Agregar la ruta para servir archivos estáticos en producción
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
